@@ -6,8 +6,7 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // dit wordt een include later maar je heb sowieso nog geen database KEANO
-    $PDO = new mysqli("localhost", "username", "password", "database");
+    $PDO = include_once 'connection.php';
     $stmt = $PDO->prepare("SELECT password FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();

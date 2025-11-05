@@ -7,8 +7,7 @@ if (isset($_POST['submit'])) {
     $confirm_password = $_POST['confirm_password'];
 
     if ($password === $confirm_password) {
-        // dit wordt een include later maar je heb sowieso nog geen database KEANO
-        $PDO = new mysqli("localhost", "username", "password", "database");
+        $PDO = include_once 'connection.php';
         $stmt = $PDO->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $username, $email, password_hash($password, PASSWORD_DEFAULT));
         $stmt->execute();
