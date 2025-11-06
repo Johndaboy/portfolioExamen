@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+require_once 'connection.php';
+$PDO = CONNECTION_PDO();
+$stmt = $PDO->prepare("SELECT * FROM operators WHERE attacker = 1");
+$stmt->execute();
+$attackers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $PDO->prepare("SELECT * FROM operators WHERE attacker = 0");
+$stmt->execute();
+$defenders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +24,10 @@
     <div class="attackers">
         <h2>Attackers</h2>
         <?php
+        
         foreach ($attackers as $operator) {
             ?>
-            <p><?= $operator['name'] . " - " . $operator['type']; ?></p>
+            <p><?= $operator['naam'] . " - " . $operator['age']; ?></p>
             <?php
         }
         ?>
@@ -22,7 +37,7 @@
         <?php
         foreach ($defenders as $operator) {
             ?>
-            <p><?= $operator['name'] . " - " . $operator['type']; ?></p>
+            <p><?= $operator['naam'] . " - " . $operator['age']; ?></p>
             <?php
         }
         ?>

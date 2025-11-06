@@ -6,16 +6,19 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $PDO = include_once 'connection.php';
-    $stmt = $PDO->prepare("SELECT password FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
+    require_once 'connection.php';
+
+    $PDO = CONNECTION_PDO();
+
+    $stmt = $PDO->prepare("SELECT id, password FROM users WHERE username = :username");
+    $stmt->bindParam(":username", $username);
     $stmt->execute();
-    $user = $stmt->fetch();
-    $hashed_password = $user['password'];
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($user) {
+        $hashed_password = $user['password'];
         if (password_verify($password, $hashed_password)) {
             $_SESSION['user'] = $user['id'];
-            header("Location: dashboard.php");
+            header("Location: operators.php");
             exit();
         }
     }
