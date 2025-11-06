@@ -8,7 +8,6 @@ CREATE TABLE `operators` (
     id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     naam VARCHAR(20) NOT NULL,
     age INTEGER NOT NULL,
-    unit VARCHAR(20) NOT NULL,
     tags VARCHAR(50),
     orginasation ENUM(
         'Ghosteyes',
@@ -58,14 +57,26 @@ INSERT INTO
     `operators` (
         `naam`,
         `age`,
-        `unit`,
         `tags`,
         `orginasation`,
         `bio`,
         `attacker`
     )
 VALUES
-    ('karel', 19, 'FBI', 'Intel', 'Viperstrike', 'Karel is de GOAT', TRUE);
+    ('Grim', 39, 'Map Control', 'Nighthaven', 'Grim', TRUE),
+    ('Blitz', 37, 'Front Line', 'Viperstrike', 'Blitz', TRUE),
+    ('Maverick', 36, 'Breach', 'Ghosteyes', 'Maverick', TRUE),
+    ('Twitch', 30, 'Intel', 'Ghosteyes', 'Twitch', TRUE),
+    ('Ash', 32, 'Breach', 'Ghosteyes', 'Ash', TRUE),
+    ('Thermite', 38, 'Breach', 'Red Hammer', 'Thermite', TRUE),
+    ('Montagne', 40, 'Front Line', 'Viperstrike', 'Montagne', TRUE),
+    ('Doc', 45, 'Support', 'Wolfguard', 'Doc', FALSE),
+    ('Rook', 33, 'Support', 'Viperstrike', 'Rook', FALSE),
+    ('Jager', 29, 'Anti-Gadget', 'Viperstrike', 'Jager', FALSE),
+    ('Bandit', 34, 'Anti-Breach', 'Red Hammer', 'Bandit', FALSE),
+    ('Frost', 32, 'Trapper', 'Wolfguard', 'Frost', FALSE),
+    ('Sledge', 35, 'Breach', 'Red Hammer', 'Sledge', TRUE),
+    ('Kapkan', 34, 'Trapper', 'Red Hammer', 'Kapkan', FALSE);
 
 INSERT INTO
     `wapens` (
