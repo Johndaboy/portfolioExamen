@@ -22,7 +22,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 15px;
-    width: 100%;
+    width: 200px;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
