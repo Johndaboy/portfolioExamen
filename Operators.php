@@ -35,7 +35,12 @@ $defenders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
                 <div class="card">
-                    <?= $operator['naam'] . " - " . $operator['age']; ?>
+                    <img src="<?= $operator['naam']; ?>.jpg" alt="<?= $operator['naam']; ?>">
+                    <p><?= $operator['naam']; ?></p>
+                    <p><?= $operator['age']; ?></p>
+                    <p><?= $operator['tags']; ?></p>
+                    <p><?= $operator['orginasation']; ?></p>
+                    <p><?= $operator['bio']; ?></p>
                 </div>
                 <?php
             }
@@ -55,7 +60,12 @@ $defenders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
                 <div class="card">
-                    <?= $operator['naam'] . " - " . $operator['age']; ?>
+                    <img src="<?= $operator['naam']; ?>.jpg" alt="<?= $operator['naam']; ?>">
+                    <p><?= $operator['naam']; ?></p>
+                    <p><?= $operator['age']; ?></p>
+                    <p><?= $operator['tags']; ?></p>
+                    <p><?= $operator['orginasation']; ?></p>
+                    <p><?= $operator['bio']; ?></p>
                 </div>
                 <?php
             }
