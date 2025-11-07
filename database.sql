@@ -34,6 +34,14 @@ CREATE TABLE `wapens` (
     firerate INTEGER NOT NULL
 );
 
+CREATE TABLE `operator_wapens` (
+    operator_id MEDIUMINT NOT NULL,
+    wapen_id MEDIUMINT NOT NULL,
+    PRIMARY KEY (operator_id, wapen_id),
+    FOREIGN KEY (operator_id) REFERENCES operators(id) ON DELETE CASCADE,
+    FOREIGN KEY (wapen_id) REFERENCES wapens(id) ON DELETE CASCADE
+);
+
 CREATE TABLE `gadgets` (
     id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     side BOOLEAN,
