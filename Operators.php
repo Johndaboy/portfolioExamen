@@ -35,7 +35,7 @@ $defenders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
                 <div class="card">
-                    <img src="images/<?= $operator['naam']; ?>.jpg" alt="<?= $operator['naam']; ?>">
+                    <img src="images/<?= $operator['naam']; ?>.avif" alt="<?= $operator['naam']; ?>">
                     <a href="detail.php?id=<?= $operator['id'] ?>"><?= $operator['naam']; ?></a>
                 </div>
                 <?php
@@ -56,7 +56,7 @@ $defenders = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
                 <div class="card">
-                    <img src="images/<?= $operator['naam']; ?>.jpg" alt="<?= $operator['naam']; ?>">
+                    <img src="images/<?= $operator['naam']; ?>.avif" alt="<?= $operator['naam']; ?>">
                     <a href="detail.php?id=<?= $operator['id'] ?>"><?= $operator['naam']; ?></a>
                 </div>
                 <?php
