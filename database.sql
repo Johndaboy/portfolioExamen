@@ -11,8 +11,7 @@ CREATE TABLE `operators` (
     tags VARCHAR(50),
     organisation VARCHAR(50) NOT NULL,
     bio TEXT NOT NULL,
-    attacker BOOLEAN,
-    foto VARCHAR(100)
+    attacker BOOLEAN
 );
 
 CREATE TABLE `wapens` (
@@ -55,24 +54,23 @@ INSERT INTO
         `tags`,
         `organisation`,
         `bio`,
-        `attacker`,
-        `foto`
+        `attacker`
     )
 VALUES
-    ('Grim', 39, 'Map Control', 'Nighthaven', 'Grim', TRUE, './grim.avif'),
-    ('Blitz', 37, 'Front Line', 'Viperstrike', 'Blitz', TRUE, './blitz.avif'),
-    ('Maverick', 36, 'Breach', 'Ghosteyes', 'Maverick', TRUE, './maverick.avif'),
-    ('Twitch', 30, 'Intel', 'Ghosteyes', 'Twitch', TRUE, './twitch.avif'),
-    ('Ash', 32, 'Breach', 'Ghosteyes', 'Ash', TRUE, './ash.avif'),
-    ('Thermite', 38, 'Breach', 'Red Hammer', 'Thermite', TRUE, './thermite.avif'),
-    ('Montagne', 40, 'Front Line', 'Viperstrike', 'Montagne', TRUE, './montagne.avif'),
-    ('Doc', 45, 'Support', 'Wolfguard', 'Doc', FALSE, './doc.avif'),
-    ('Rook', 33, 'Support', 'Viperstrike', 'Rook', FALSE, './rook.avif'),
-    ('Jager', 29, 'Anti-Gadget', 'Viperstrike', 'Jager', FALSE, './jager.avif'),
-    ('Bandit', 34, 'Anti-Breach', 'Red Hammer', 'Bandit', FALSE, './bandit.avif'),
-    ('Frost', 32, 'Trapper', 'Wolfguard', 'Frost', FALSE, './frost.avif'),
-    ('Sledge', 35, 'Breach', 'Red Hammer', 'Sledge', TRUE, './sledge.avif'),
-    ('Kapkan', 34, 'Trapper', 'Red Hammer', 'Kapkan', FALSE, './kapkan.avif');
+    ('Grim', 39, 'Map Control', 'Nighthaven', 'Grim', TRUE),
+    ('Blitz', 37, 'Front Line', 'Viperstrike', 'Blitz', TRUE),
+    ('Maverick', 36, 'Breach', 'Ghosteyes', 'Maverick', TRUE),
+    ('Twitch', 30, 'Intel', 'Ghosteyes', 'Twitch', TRUE),
+    ('Ash', 32, 'Breach', 'Ghosteyes', 'Ash', TRUE),
+    ('Thermite', 38, 'Breach', 'Red Hammer', 'Thermite', TRUE),
+    ('Montagne', 40, 'Front Line', 'Viperstrike', 'Montagne', TRUE),
+    ('Doc', 45, 'Support', 'Wolfguard', 'Doc', FALSE),
+    ('Rook', 33, 'Support', 'Viperstrike', 'Rook', FALSE),
+    ('Jager', 29, 'Anti-Gadget', 'Viperstrike', 'Jager', FALSE),
+    ('Bandit', 34, 'Anti-Breach', 'Red Hammer', 'Bandit', FALSE),
+    ('Frost', 32, 'Trapper', 'Wolfguard', 'Frost', FALSE),
+    ('Sledge', 35, 'Breach', 'Red Hammer', 'Sledge', TRUE),
+    ('Kapkan', 34, 'Trapper', 'Red Hammer', 'Kapkan', FALSE);
 
 INSERT INTO
     `wapens` (

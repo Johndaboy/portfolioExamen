@@ -6,7 +6,11 @@ $PDO = CONNECTION_PDO();
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 1;
 $stmt = $PDO->prepare('SELECT * FROM operators WHERE id = ' . $id);
 $stmt->execute();
-$stmt = $stmt->fetch(PDO::FETCH_ASSOC);
+$operator = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$stmt = $PDO->prepare('SELECT * FROM wapens');
+$stmt->execute();
+$wapens = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -22,12 +26,12 @@ $stmt = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <body>
     <div class="card">
-        <p><?= $stmt['naam']; ?></p>
-        <p><?= $stmt['tags']; ?></p>
-        <p><?= $stmt['age']; ?></p>
-        <img class="kaas" src="images/<?= $stmt['organisation']; ?>.avif" alt="<?= $stmt['organisation']; ?>">
-        <p><?= $stmt['bio']; ?></p>
-        <img src="images/<?= $stmt['naam']; ?>.avif" alt="<?= $stmt['naam']; ?>">
+        <p><?= $operator['naam']; ?></p>
+        <p><?= $operator['tags']; ?></p>
+        <p><?= $operator['age']; ?></p>
+        <img class="kaas" src="images/<?= $operator['organisation']; ?>.avif" alt="<?= $operator['organisation']; ?>">
+        <p><?= $operator['bio']; ?></p>
+        <img src="images/<?= $operator['naam']; ?>.avif" alt="<?= $operator['naam']; ?>">
     </div>
     <a href="Operators.php">Terug</a>
 </body>
