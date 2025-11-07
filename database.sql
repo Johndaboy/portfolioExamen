@@ -9,13 +9,7 @@ CREATE TABLE `operators` (
     naam VARCHAR(20) NOT NULL,
     age INTEGER NOT NULL,
     tags VARCHAR(50),
-    organisation ENUM(
-        'Ghosteyes',
-        'Red Hammer',
-        'Wolfguard',
-        'Nighthaven',
-        'Viperstrike'
-    ) NOT NULL,
+    organisation VARCHAR(50) NOT NULL,
     bio TEXT NOT NULL,
     attacker BOOLEAN,
     foto VARCHAR(100)
@@ -65,20 +59,20 @@ INSERT INTO
         `foto`
     )
 VALUES
-    ('Grim', 39, 'Map Control', 'Nighthaven', 'Grim', TRUE, './grim.jpg'),
-    ('Blitz', 37, 'Front Line', 'Viperstrike', 'Blitz', TRUE, './blitz.jpg'),
-    ('Maverick', 36, 'Breach', 'Ghosteyes', 'Maverick', TRUE, './maverick.jpg'),
-    ('Twitch', 30, 'Intel', 'Ghosteyes', 'Twitch', TRUE, './twitch.jpg'),
-    ('Ash', 32, 'Breach', 'Ghosteyes', 'Ash', TRUE, './ash.jpg'),
-    ('Thermite', 38, 'Breach', 'Red Hammer', 'Thermite', TRUE, './thermite.jpg'),
-    ('Montagne', 40, 'Front Line', 'Viperstrike', 'Montagne', TRUE, './montagne.jpg'),
-    ('Doc', 45, 'Support', 'Wolfguard', 'Doc', FALSE, './doc.jpg'),
-    ('Rook', 33, 'Support', 'Viperstrike', 'Rook', FALSE, 'rook.jpg'),
-    ('Jager', 29, 'Anti-Gadget', 'Viperstrike', 'Jager', FALSE, 'jager.jpg'),
-    ('Bandit', 34, 'Anti-Breach', 'Red Hammer', 'Bandit', FALSE, 'bandit.jpg'),
-    ('Frost', 32, 'Trapper', 'Wolfguard', 'Frost', FALSE, 'frost.jpg'),
-    ('Sledge', 35, 'Breach', 'Red Hammer', 'Sledge', TRUE, 'sledge.jpg'),
-    ('Kapkan', 34, 'Trapper', 'Red Hammer', 'Kapkan', FALSE, 'kapkan.jpg');
+    ('Grim', 39, 'Map Control', 'Nighthaven', 'Grim', TRUE, './grim.avif'),
+    ('Blitz', 37, 'Front Line', 'Viperstrike', 'Blitz', TRUE, './blitz.avif'),
+    ('Maverick', 36, 'Breach', 'Ghosteyes', 'Maverick', TRUE, './maverick.avif'),
+    ('Twitch', 30, 'Intel', 'Ghosteyes', 'Twitch', TRUE, './twitch.avif'),
+    ('Ash', 32, 'Breach', 'Ghosteyes', 'Ash', TRUE, './ash.avif'),
+    ('Thermite', 38, 'Breach', 'Red Hammer', 'Thermite', TRUE, './thermite.avif'),
+    ('Montagne', 40, 'Front Line', 'Viperstrike', 'Montagne', TRUE, './montagne.avif'),
+    ('Doc', 45, 'Support', 'Wolfguard', 'Doc', FALSE, './doc.avif'),
+    ('Rook', 33, 'Support', 'Viperstrike', 'Rook', FALSE, './rook.avif'),
+    ('Jager', 29, 'Anti-Gadget', 'Viperstrike', 'Jager', FALSE, './jager.avif'),
+    ('Bandit', 34, 'Anti-Breach', 'Red Hammer', 'Bandit', FALSE, './bandit.avif'),
+    ('Frost', 32, 'Trapper', 'Wolfguard', 'Frost', FALSE, './frost.avif'),
+    ('Sledge', 35, 'Breach', 'Red Hammer', 'Sledge', TRUE, './sledge.avif'),
+    ('Kapkan', 34, 'Trapper', 'Red Hammer', 'Kapkan', FALSE, './kapkan.avif');
 
 INSERT INTO
     `wapens` (
